@@ -1,0 +1,125 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Example of the Authorization Code flow with Spotify</title>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+      <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <div class="ui container">
+        <h1 class="ui dividing header">Display your most Played Tracks/Artists</h1>
+      <div id="login">
+        <h2 class="ui dividing header">LOGIN!</h2>
+        <a href="/login" class="btn btn-primary">Log in with Spotify</a>
+      </div>
+      <div id="loggedin">
+        <div class="ui segments">
+            <div class="ui segment">
+                <div class="ui labeled input">
+                    <a class="ui label">Typ</a>
+                    <input type="text" title="type" value="artists" id="top_type" class="ui inverted input">
+                </div>
+                <div class="ui labeled input">
+                    <a class="ui label">Zeitraum</a>
+                    <input type="text" title="time_range" value="long_term" id="top_time_range" class="ui inverted input">
+                </div>
+                <div class="ui labeled input">
+                    <a class="ui label">Limit</a>
+                    <input type="text" title="limit" value="10" id="top_limit" class="ui inverted input">
+                </div>
+                <div class="ui labeled input">
+                    <a class="ui label">Offset</a>
+                    <input type="text" title="offset" value="0" id="top_offset" class="ui inverted input">
+                </div>
+            </div>
+            <div class="ui segment">
+                <button class="ui right button" id="top-played">View most played</button>
+            </div>
+        </div>
+        <div id="top">
+        </div>
+      </div>
+    </div>
+
+    <script id="user-artist-template" type="text/x-handlebars-template">
+        <h2 class="ui dividing header">
+           {{most_played_type}}
+        </h2>
+        <div class="ui container">
+            <div class="ui relaxed divided items">
+            {{#each items}}
+                <div class="item">
+                    <div class="ui small bordered image">
+                        <a href="{{this.external_urls.spotify}}" target="_blank">
+                            {{#if_eq ../most_played_type "artists"}}
+                                <img src="{{this.images.0.url}}">
+                            {{else}}
+                                <img src="{{this.album.images.0.url}}">
+                            {{/if_eq}}
+                        </a>
+                    </div>
+                    <div class="content">
+                        <a class="header" href="{{this.external_urls.spotify}}" target="_blank">{{this.name}} {{#if_eq ../most_played_type "tracks"}} - {{this.artists.0.name}} {{/if_eq}}</a>
+                        <div class="meta">
+                            <a>Nr.{{add_offset (inc @index) ../offset}} in {{../most_played_type}}</a>
+                        </div>
+                        <div class="description">
+                            {{#if followers }}
+                                <div class="ui label">
+                                    Followers:
+                                    <div class="detail">
+                                        {{followers.total}}
+                                    </div>
+                                </div>
+                            {{/if}}
+                        </div>
+                        <div class="extra">
+                            {{#if genres }}
+                            <div class="ui blue labels">
+                                {{#each genres}}
+                                <a class="ui label">
+                                    {{this}}
+                                </a>
+                                {{/each}}
+                            </div>
+                            {{/if}}
+                            <div>
+                                <div class="float_div label">
+                                    Popularity:
+                                </div>
+                                <div class="ui progress float_div" data-percent="{{this.popularity}}">
+                                    <div class="bar" style="width:{{this.popularity}}%;">
+                                        <div class="progress"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ui input float_div">
+                                <input type="text" placeholder="" value="{{this.external_urls.spotify}}" id="spotify_url_{{@index}}">
+                                <button class="ui teal right labeled icon button" onclick="myFunction(this);" data-input="spotify_url_{{@index}}">
+                                    <i class="copy icon"></i>
+                                    Copy
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {{/each}}
+            </div>
+        </div>
+    </script>
+    <script>
+        function myFunction(button) {
+            data_input = button.dataset.input;
+            ele = document.getElementById(data_input);
+            ele.select();
+            document.execCommand("copy");
+        }
+    </script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0-alpha.1/handlebars.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
+

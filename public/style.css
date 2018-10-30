@@ -1,0 +1,34 @@
+#login, #loggedin {
+    display: none;
+}
+.text-overflow {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 500px;
+}
+h1,h2,h3,h4,h5,h6 {
+    text-transform: capitalize !important;
+}
+.extra .ui.blue.labels {
+    width:65%;
+}
+.ui.progress {
+    width:5%;
+}
+
+.float_div {
+    float:left;
+}
+
+.float_div.label {
+    margin-right: 1%;
+}
+
+.ui.input.float_div {
+    clear:both;
+}
+
+.ui.progress.float_div:last-child {
+    margin: 0 0 0.5em;
+}
