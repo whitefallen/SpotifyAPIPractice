@@ -8,25 +8,68 @@
 
   <body>
     <div class="ui container">
-        <h1 class="ui dividing header">Display your most Played Tracks/Artists</h1>
-      <div id="login">
-        <h2 class="ui dividing header">LOGIN!</h2>
-        <a href="/login" class="btn btn-primary">Log in with Spotify</a>
+        <h1 class="ui dividing header" style="text-align: center;">Display your most Played Tracks/Artists</h1>
+      <div id="login" class="pusher">
+          <div class="ui vertical masthead center aligned segment" style="min-height: 700px">
+              <div class="ui text container">
+                  <a href="/login"><div class="ui huge primary button">Get Started <i class="right arrow icon"></i></div></a>
+              </div>
+          </div>
       </div>
       <div id="loggedin">
-        <div class="ui segments">
+          <div class="">
+              <table class="ui black table">
+                  <thead>
+                  <tr><th>Option</th>
+                      <th>Value</th>
+                      <th>Description</th>
+                  </tr></thead><tbody>
+              <tr>
+                  <td>Type</td>
+                  <td>artists or tracks</td>
+                  <td>Entity type to search for</td>
+              </tr>
+              <tr>
+                  <td>Time_range</td>
+                  <td>long_term , medium_term or short_term</td>
+                  <td>
+                      <div class="ui list">
+                          <div class="item">long_term - calculated from several years of data and including all new data as it becomes available</div>
+                          <div class="item">medium_term - approximately last 6 months</div>
+                          <div class="item">short_term - approximately last 4 weeks</div>
+                      </div>
+                  </td>
+              </tr>
+              <tr>
+                  <td>Limit</td>
+                  <td>Defaul:20. Minimum: 1. Maximum: 50. </td>
+                  <td>
+                      The number of entities to return.
+                  </td>
+              </tr>
+              <tr>
+                  <td>Offeset</td>
+                  <td>Default: 0 (i.e., the first track). Use with limit to get the next set of entities.</td>
+                  <td>
+                      The index of the first entity to return.
+                  </td>
+              </tr>
+              </tbody>
+              </table>
+          </div>
+          <div class="ui segments">
             <div class="ui segment">
                 <div class="ui labeled input">
                     <a class="ui label">Type</a>
                     <input type="text" title="type" value="artists" id="top_type" class="ui inverted input">
                 </div>
                 <div class="ui labeled input">
-                    <a class="ui label">Timespan</a>
-                    <input type="text" title="time_range" value="long_term" id="top_time_range" class="ui inverted input">
+                    <a class="ui label">Time range</a>
+                    <input type="text" title="time_range" value="medium_term" id="top_time_range" class="ui inverted input">
                 </div>
                 <div class="ui labeled input">
                     <a class="ui label">Limit</a>
-                    <input type="text" title="limit" value="10" id="top_limit" class="ui inverted input">
+                    <input type="text" title="limit" value="20" id="top_limit" class="ui inverted input">
                 </div>
                 <div class="ui labeled input">
                     <a class="ui label">Offset</a>
