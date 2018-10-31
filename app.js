@@ -2,10 +2,11 @@ var express = require('express'); // Express web server framework
 var request = require('request'); // "Request" library
 var querystring = require('querystring');
 var cookieParser = require('cookie-parser');
+var dotenv = require("dotenv").config();
 
-var client_id = 'Your client id'; // Your client id
-var client_secret = 'Your secret'; // Your secret
-var redirect_uri = 'Your redirect uri'; // Your redirect uri
+var client_id = process.env.client_id; // Your client id
+var client_secret = process.env.client_secret; // Your secret
+var redirect_uri = process.env.callback; // Your redirect uri
 
 /**
  * Generates a random string containing numbers and letters
@@ -127,4 +128,5 @@ app.get('/refresh_token', function(req, res) {
 });
 
 console.log('Listening on 8888');
+console.log(process.env.client_id);
 app.listen(8888);
