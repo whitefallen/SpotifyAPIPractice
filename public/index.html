@@ -105,7 +105,14 @@
                     <div class="content">
                         <a class="header" href="{{this.external_urls.spotify}}" target="_blank">{{this.name}} {{#if_eq ../most_played_type "tracks"}} - {{this.artists.0.name}} {{/if_eq}}</a>
                         <div class="meta">
-                            <a>Nr.{{add_offset (inc @index) ../offset}} in {{../most_played_type}}</a>
+                            <div class="meta">
+                                <a>Nr.{{add_offset (inc @index) ../offset}} in {{../most_played_type}}</a>
+                            </div>
+                            <div class="meta">
+                                {{#if_eq ../most_played_type "tracks"}}
+                                    <a href="{{this.album.external_urls.spotify}}">Album - {{this.album.name}}</a>
+                                {{/if_eq}}
+                            </div>
                         </div>
                         <div class="description">
                             {{#if followers }}
@@ -128,6 +135,7 @@
                             </div>
                             {{/if}}
                             <div>
+
                                 <div class="float_div label">
                                     Popularity:
                                 </div>
