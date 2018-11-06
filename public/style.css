@@ -32,3 +32,8 @@ h1,h2,h3,h4,h5,h6 {
 .ui.progress.float_div:last-child {
     margin: 0 0 0.5em;
 }
+
+.ui.small.bordered.image img:hover {
+    border-radius: 1vh;
+    border-color: lightskyblue;
+}

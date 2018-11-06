@@ -96,9 +96,9 @@
                     <div class="ui small bordered image">
                         <a href="{{this.external_urls.spotify}}" target="_blank">
                             {{#if_eq ../most_played_type "artists"}}
-                                <img src="{{this.images.0.url}}">
+                                <img onmouseover="animateImg(this)" class="image_cover" src="{{this.images.0.url}}">
                             {{else}}
-                                <img src="{{this.album.images.0.url}}">
+                                <img onmouseover="animateImg(this)" class="image_cover" src="{{this.album.images.0.url}}">
                             {{/if_eq}}
                         </a>
                     </div>
@@ -166,6 +166,13 @@
             ele.select();
             document.execCommand("copy");
         }
+
+        function animateImg(e) {
+            $(e)
+                .transition('pulse')
+            ;
+        }
+
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0-alpha.1/handlebars.min.js"></script>
     <script src="https://code.jquery.com/jquery-1.10.1.min.js"></script>
