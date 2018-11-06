@@ -139,7 +139,7 @@
                                 <div class="float_div label">
                                     Popularity:
                                 </div>
-                                <div class="ui progress float_div" data-percent="{{this.popularity}}">
+                                <div class="ui progress float_div" data-percent="{{this.popularity}}" data-content="Popularity : {{this.popularity}}" onmouseover="hoverPop(this)">
                                     <div class="bar" style="width:{{this.popularity}}%;">
                                         <div class="progress"></div>
                                     </div>
@@ -159,7 +159,19 @@
             </div>
         </div>
     </script>
-    <script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0-alpha.1/handlebars.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script type="application/javascript">
+
+        function hoverPop(e) {
+            $('.ui.progress.float_div')
+                .popup({
+                    on: 'click'
+                })
+            ;
+        }
+
         function myFunction(button) {
             data_input = button.dataset.input;
             ele = document.getElementById(data_input);
@@ -172,12 +184,11 @@
                 .transition('pulse')
             ;
         }
-
     </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0-alpha.1/handlebars.min.js"></script>
-    <script src="https://code.jquery.com/jquery-1.10.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+
     <script src="script.js"></script>
+
   </body>
 </html>
 
