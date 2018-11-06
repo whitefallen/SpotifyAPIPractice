@@ -106,7 +106,7 @@
                         <a class="header" href="{{this.external_urls.spotify}}" target="_blank">{{this.name}} {{#if_eq ../most_played_type "tracks"}} - {{this.artists.0.name}} {{/if_eq}}</a>
                         <div class="meta">
                             <div class="meta">
-                                <a>Nr.{{add_offset (inc @index) ../offset}} in {{../most_played_type}}</a>
+                                <a>Nr.{{add_offset (inc @index) ../offset}} in {{../most_played_type}} - {{../time_range}}</a>
                             </div>
                             <div class="meta">
                                 {{#if_eq ../most_played_type "tracks"}}
