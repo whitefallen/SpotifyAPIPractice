@@ -61,6 +61,6 @@ body div.background-image-container {
     min-height: 100%;
 }
 
-html body div.meta a {
+html body div.meta a, .float_div.label {
     color :rgb(12, 2, 96) !important;
 }
