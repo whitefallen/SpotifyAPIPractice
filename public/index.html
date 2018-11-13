@@ -97,9 +97,9 @@
                     <div class="ui small bordered image">
                         <a href="{{this.external_urls.spotify}}" target="_blank">
                             {{#if_eq ../most_played_type "artists"}}
-                                <img onmouseover="animateImg(this)" class="image_cover" src="{{this.images.0.url}}">
+                                <img onmouseover="animateImg(this)" class="image_cover image_miniature" src="{{this.images.0.url}}">
                             {{else}}
-                                <img onmouseover="animateImg(this)" class="image_cover" src="{{this.album.images.0.url}}">
+                                <img onmouseover="animateImg(this)" class="image_cover image_miniature" src="{{this.album.images.0.url}}">
                             {{/if_eq}}
                         </a>
                     </div>
