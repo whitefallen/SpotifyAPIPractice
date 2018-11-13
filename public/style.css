@@ -47,7 +47,7 @@ h1,h2,h3,h4,h5,h6 {
     margin-right: 0.5vw;
 }
 
-.image_miniature {
+.ui.image img.image_cover.image_miniature   {
     width: 150px;
     height: 150px;
 }
