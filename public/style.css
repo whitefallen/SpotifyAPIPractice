@@ -61,6 +61,6 @@ body div.background-image-container {
     min-height: 100%;
 }
 
-body html div.meta {
+html body div.meta {
     color :rgb(12, 2, 96) !important;
 }
