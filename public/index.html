@@ -8,7 +8,7 @@
 
   <body>
     <div class="ui container">
-        <h1 class="ui dividing header" style="text-align: center;">Display your most Played Tracks/Artists</h1>
+        <h1 class="ui dividing header" id="starting_header">Display your most Played Tracks/Artists</h1>
       <div id="login" class="pusher">
           <div class="ui vertical masthead center aligned segment" style="min-height: 700px">
               <div class="ui text container">
@@ -59,19 +59,19 @@
           </div>
           <div class="ui segments">
             <div class="ui segment">
-                <div class="ui labeled input">
+                <div class="ui labeled input input_margin_right">
                     <a class="ui label">Type</a>
                     <input type="text" title="type" value="artists" id="top_type" class="ui inverted input">
                 </div>
-                <div class="ui labeled input">
+                <div class="ui labeled input input_margin_right">
                     <a class="ui label">Time range</a>
                     <input type="text" title="time_range" value="medium_term" id="top_time_range" class="ui inverted input">
                 </div>
-                <div class="ui labeled input">
+                <div class="ui labeled input input_margin_right">
                     <a class="ui label">Limit</a>
                     <input type="text" title="limit" value="20" id="top_limit" class="ui inverted input">
                 </div>
-                <div class="ui labeled input">
+                <div class="ui labeled input input_margin_right">
                     <a class="ui label">Offset</a>
                     <input type="text" title="offset" value="0" id="top_offset" class="ui inverted input">
                 </div>

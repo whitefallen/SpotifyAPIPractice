@@ -37,3 +37,12 @@ h1,h2,h3,h4,h5,h6 {
     border-radius: 1vh;
     border-color: lightskyblue;
 }
+
+#starting_header {
+    text-align: center;
+    margin-top: 2vh;
+}
+
+.input_margin_right {
+    margin-right: 1vw;
+}
