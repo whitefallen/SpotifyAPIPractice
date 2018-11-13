@@ -8,96 +8,97 @@
   </head>
 
   <body>
-    <div class="ui container">
-        <h1 class="ui dividing header" id="starting_header">Display your most Played Tracks/Artists</h1>
-      <div id="login" class="pusher">
-          <div class="ui vertical masthead center aligned segment" style="min-height: 700px">
-              <div class="ui text container">
-                  <a href="/login"><div class="ui huge primary button">Get Started <i class="right arrow icon"></i></div></a>
+      <div class="background-image-container">
+        <div class="ui container">
+            <h1 class="ui dividing header" id="starting_header">Display your most Played Tracks/Artists</h1>
+          <div id="login" class="pusher">
+              <div class="ui vertical masthead center aligned segment" style="min-height: 700px">
+                  <div class="ui text container">
+                      <a href="/login"><div class="ui huge primary button">Get Started <i class="right arrow icon"></i></div></a>
+                  </div>
               </div>
           </div>
-      </div>
-      <div id="loggedin">
-          <div class="">
-              <table class="ui black table">
-                  <thead>
-                  <tr><th>Option</th>
-                      <th>Value</th>
-                      <th>Description</th>
-                  </tr></thead><tbody>
-              <tr>
-                  <td>Type</td>
-                  <td>artists or tracks</td>
-                  <td>Entity type to search for</td>
-              </tr>
-              <tr>
-                  <td>Time_range</td>
-                  <td>long_term , medium_term or short_term</td>
-                  <td>
-                      <div class="ui list">
-                          <div class="item">long_term - calculated from several years of data and including all new data as it becomes available</div>
-                          <div class="item">medium_term - approximately last 6 months</div>
-                          <div class="item">short_term - approximately last 4 weeks</div>
-                      </div>
-                  </td>
-              </tr>
-              <tr>
-                  <td>Limit</td>
-                  <td>Defaul:20. Minimum: 1. Maximum: 50. </td>
-                  <td>
-                      The number of entities to return.
-                  </td>
-              </tr>
-              <tr>
-                  <td>Offeset</td>
-                  <td>Default: 0 (i.e., the first track). Use with limit to get the next set of entities.</td>
-                  <td>
-                      The index of the first entity to return.
-                  </td>
-              </tr>
-              </tbody>
-              </table>
+          <div id="loggedin">
+              <div class="">
+                  <table class="ui black table">
+                      <thead>
+                      <tr><th>Option</th>
+                          <th>Value</th>
+                          <th>Description</th>
+                      </tr></thead><tbody>
+                  <tr>
+                      <td>Type</td>
+                      <td>artists or tracks</td>
+                      <td>Entity type to search for</td>
+                  </tr>
+                  <tr>
+                      <td>Time_range</td>
+                      <td>long_term , medium_term or short_term</td>
+                      <td>
+                          <div class="ui list">
+                              <div class="item">long_term - calculated from several years of data and including all new data as it becomes available</div>
+                              <div class="item">medium_term - approximately last 6 months</div>
+                              <div class="item">short_term - approximately last 4 weeks</div>
+                          </div>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td>Limit</td>
+                      <td>Defaul:20. Minimum: 1. Maximum: 50. </td>
+                      <td>
+                          The number of entities to return.
+                      </td>
+                  </tr>
+                  <tr>
+                      <td>Offeset</td>
+                      <td>Default: 0 (i.e., the first track). Use with limit to get the next set of entities.</td>
+                      <td>
+                          The index of the first entity to return.
+                      </td>
+                  </tr>
+                  </tbody>
+                  </table>
+              </div>
+              <div class="ui segments">
+                <div class="ui segment">
+                    <div class="ui labeled input input_margin_right">
+                        <a class="ui label">Type</a>
+                        <input type="text" title="type" value="artists" id="top_type" class="ui inverted input">
+                    </div>
+                    <div class="ui labeled input input_margin_right">
+                        <a class="ui label">Time range</a>
+                        <input type="text" title="time_range" value="medium_term" id="top_time_range" class="ui inverted input">
+                    </div>
+                    <div class="ui labeled input input_margin_right">
+                        <a class="ui label">Limit</a>
+                        <input type="text" title="limit" value="20" id="top_limit" class="ui inverted input">
+                    </div>
+                    <div class="ui labeled input input_margin_right">
+                        <a class="ui label">Offset</a>
+                        <input type="text" title="offset" value="0" id="top_offset" class="ui inverted input">
+                    </div>
+                </div>
+                <div class="ui segment">
+                    <button class="ui right button" id="top-played">View most played</button>
+                </div>
+            </div>
+            <div id="top">
+            </div>
           </div>
-          <div class="ui segments">
-            <div class="ui segment">
-                <div class="ui labeled input input_margin_right">
-                    <a class="ui label">Type</a>
-                    <input type="text" title="type" value="artists" id="top_type" class="ui inverted input">
-                </div>
-                <div class="ui labeled input input_margin_right">
-                    <a class="ui label">Time range</a>
-                    <input type="text" title="time_range" value="medium_term" id="top_time_range" class="ui inverted input">
-                </div>
-                <div class="ui labeled input input_margin_right">
-                    <a class="ui label">Limit</a>
-                    <input type="text" title="limit" value="20" id="top_limit" class="ui inverted input">
-                </div>
-                <div class="ui labeled input input_margin_right">
-                    <a class="ui label">Offset</a>
-                    <input type="text" title="offset" value="0" id="top_offset" class="ui inverted input">
-                </div>
-            </div>
-            <div class="ui segment">
-                <button class="ui right button" id="top-played">View most played</button>
-            </div>
         </div>
-        <div id="top">
-        </div>
-      </div>
-    </div>
 
-    <script id="user-artist-template" type="text/x-handlebars-template">
-        <h2 class="ui dividing header">
-           {{most_played_type}}
-        </h2>
-        <div class="ui container">
-            <div class="ui relaxed divided items">
-            {{#each items}}
-                <div class="item">
-                    <div class="ui small bordered image">
-                        <a href="{{this.external_urls.spotify}}" target="_blank">
-                            {{#if_eq ../most_played_type "artists"}}
-                                <img onmouseover="animateImg(this)" class="image_cover image_miniature" src="{{this.images.0.url}}">
+        <script id="user-artist-template" type="text/x-handlebars-template">
+            <h2 class="ui dividing header">
+               {{most_played_type}}
+            </h2>
+            <div class="ui container">
+                <div class="ui relaxed divided items">
+                {{#each items}}
+                    <div class="item">
+                        <div class="ui small bordered image">
+                            <a href="{{this.external_urls.spotify}}" target="_blank">
+                                {{#if_eq ../most_played_type "artists"}}
+                                    <img onmouseover="animateImg(this)" class="image_cover image_miniature" src="{{this.images.0.url}}">
                             {{else}}
                                 <img onmouseover="animateImg(this)" class="image_cover image_miniature" src="{{this.album.images.0.url}}">
                             {{/if_eq}}
@@ -155,12 +156,12 @@
                             </div>
                         </div>
                     </div>
+                 </div>
+                {{/each}}
                 </div>
-            {{/each}}
             </div>
-        </div>
-    </script>
-
+        </script>
+    </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0-alpha.1/handlebars.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script type="application/javascript">
@@ -189,7 +190,6 @@
     <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
 
     <script src="script.js"></script>
-
   </body>
 </html>
 
