@@ -54,4 +54,5 @@ h1,h2,h3,h4,h5,h6 {
 
 html, body {
     background-image: linear-gradient(to top, #9890e3 0%, #b1f4cf 100%) !important;
+    min-height: 100%;
 }
