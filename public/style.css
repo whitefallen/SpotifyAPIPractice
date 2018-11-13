@@ -52,6 +52,10 @@ h1,h2,h3,h4,h5,h6 {
     width: 150px;
 }
 
+html {
+    margin: -1vh 0 0;
+}
+
 body div.background-image-container {
     background-image: linear-gradient(to top, #9890e3 0%, #b1f4cf 100%) !important;
     min-height: 100%;
