@@ -50,3 +50,7 @@ h1,h2,h3,h4,h5,h6 {
 .ui.image img.image_cover.image_miniature   {
     height: 150px;
 }
+
+html {
+    background-image: radial-gradient(circle 248px at center, #16d9e3 0%, #30c7ec 47%, #46aef7 100%);
+}
