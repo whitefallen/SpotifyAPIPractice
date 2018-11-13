@@ -48,6 +48,5 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .ui.image img.image_cover.image_miniature   {
-    width: 150px;
     height: 150px;
 }
