@@ -56,10 +56,24 @@ html {
     margin: -2vh 0 0;
 }
 
-body div.background-image-container {
-    background-image: linear-gradient(-225deg, #A445B2 0%, #D41872 52%, #FF0066 100%) !important;
-    min-height: 100%;
+
+@-webkit-keyframes changeGradient {
+    0% {background-image: linear-gradient(-225deg, #D41872 0%, #FF0066 52%, #A445B2 100%) !important;}
+    33% {background-image: linear-gradient(-225deg, #A445B2 0%, #D41872 52%, #FF0066 100%) !important;}
+    66% {background-image: linear-gradient(-225deg, #FF0066 0%, #A445B2 52%, #D41872 100%) !important;}
+    100% {background-image: linear-gradient(-225deg, #A445B2 0%, #D41872 52%, #FF0066 100%) !important;}
 }
+
+body div.background-image-container {
+
+    min-height: 100%;
+    background-image: linear-gradient(-225deg, #A445B2 0%, #D41872 52%, #FF0066 100%) !important;
+    -webkit-animation-name: changeGradient;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-duration: 10s;
+}
+
+
 
 html body div.meta a, .float_div.label {
     color :rgb(12, 2, 96) !important;
