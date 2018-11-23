@@ -58,18 +58,20 @@ html {
 
 
 @-webkit-keyframes changeGradient {
-    0% {background: linear-gradient(-225deg, #D41872 0%, #FF0066 52%, #A445B2 100%);}
-    33% {background: linear-gradient(-225deg, #A445B2 0%, #D41872 52%, #FF0066 100%);}
-    66% {background: linear-gradient(-225deg, #FF0066 0%, #A445B2 52%, #D41872 100%);}
-    100% {background: linear-gradient(-225deg, #A445B2 15%, #D41872 42%, #FF0066 90%);}
+    0% {background-position: 0% 50%}
+    25% {background-position: 0% 100%}
+    50% {background-position: 50% 50%}
+    75% {background-position: 50% 0%}
+    100% {background-position: 100% 0%}
 }
 
 body div.background-image-container {
     min-height: 100%;
     background: linear-gradient(-225deg, #A445B2 0%, #D41872 52%, #FF0066 100%);
+    background-size: 100% 100%;
     -webkit-animation-name: changeGradient;
     -webkit-animation-iteration-count: infinite;
-    -webkit-animation-duration: 10s;
+    -webkit-animation-duration: 20s;
     -webkit-animation-timing-function: ease-in;
 }
 
