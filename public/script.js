@@ -74,7 +74,6 @@
                     'Authorization': 'Bearer ' + access_token
                 },
                 success: function(response) {
-                    console.log(response);
                     response.most_played_type = type;
                     response.time_range = time_range;
                     userArtistPlaceholder.innerHTML = userArtistTemplate(response);
