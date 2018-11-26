@@ -80,7 +80,6 @@
                     userArtistPlaceholder.innerHTML = userArtistTemplate(response);
                 }
             });
-            console.log(url);
         }, false);
     }
 })();

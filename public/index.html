@@ -32,7 +32,7 @@
                       <td>Entity type to search for</td>
                   </tr>
                   <tr>
-                      <td>Time_range</td>
+                      <td>Time range</td>
                       <td>long_term , medium_term or short_term</td>
                       <td>
                           <div class="ui list">
@@ -59,29 +59,38 @@
                   </tbody>
                   </table>
               </div>
+
               <div class="ui segments">
-                <div class="ui segment">
-                    <div class="ui labeled input input_margin_right">
-                        <a class="ui label">Type</a>
-                        <input type="text" title="type" value="artists" id="top_type" class="ui inverted input">
-                    </div>
-                    <div class="ui labeled input input_margin_right">
-                        <a class="ui label">Time range</a>
-                        <input type="text" title="time_range" value="medium_term" id="top_time_range" class="ui inverted input">
-                    </div>
-                    <div class="ui labeled input input_margin_right">
-                        <a class="ui label">Limit</a>
-                        <input type="text" title="limit" value="20" id="top_limit" class="ui inverted input">
-                    </div>
-                    <div class="ui labeled input input_margin_right">
-                        <a class="ui label">Offset</a>
-                        <input type="text" title="offset" value="0" id="top_offset" class="ui inverted input">
-                    </div>
-                </div>
-                <div class="ui segment">
-                    <button class="ui right button" id="top-played">View most played</button>
-                </div>
-            </div>
+                  <div class="ui segment">
+                      <div class="ui labeled input input_margin_right">
+                          <a class="ui label">Type</a>
+                          <select class="ui dropdown">
+                              <option value="artists" selected="selected">Artists</option>
+                              <option value="tracks">Tracks</option>
+                          </select>
+                      </div>
+                      <div class="ui labeled input input_margin_right">
+                          <a class="ui label">Time range</a>
+                          <select class="ui dropdown">
+                              <option value="short_term">short term</option>
+                              <option value="medium_term" selected="selected">medium term</option>
+                              <option value="long_term">long term</option>
+                          </select>
+                      </div>
+                      <div class="ui labeled input input_margin_right">
+                          <a class="ui label">Limit</a>
+                          <input type="text" title="limit" value="20" id="top_limit" class="ui inverted input">
+                      </div>
+                      <div class="ui labeled input input_margin_right">
+                          <a class="ui label">Offset</a>
+                          <input type="text" title="offset" value="0" id="top_offset" class="ui inverted input">
+                      </div>
+                  </div>
+                  <div class="ui segment">
+                      <button class="ui right button" id="top-played">View most played</button>
+                  </div>
+              </div>
+
             <div id="top">
             </div>
           </div>
@@ -165,7 +174,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0-alpha.1/handlebars.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script type="application/javascript">
-
+        $(document).ready(function(){
+            $('select.dropdown')
+                .dropdown()
+            ;
+        });
         function hoverPop(e) {
             $('.ui.progress.float_div')
                 .popup({
@@ -186,6 +199,8 @@
                 .transition('pulse')
             ;
         }
+
+
     </script>
     <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
 
