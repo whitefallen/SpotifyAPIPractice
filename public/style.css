@@ -87,3 +87,7 @@ body div.background-image-container {
 html body div.meta a, .float_div.label {
     color :rgb(12, 2, 96) !important;
 }
+
+.ui.divided.items > .item {
+    border-top: 1px solid rgba(0,0,0,100) !important;
+}
