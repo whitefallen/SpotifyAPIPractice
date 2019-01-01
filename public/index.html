@@ -9,8 +9,17 @@
 
   <body>
       <div class="background-image-container">
-        <div class="ui container">
+        <div class="ui container" id="example2">
             <h1 class="ui dividing header" id="starting_header">Display your most Played Tracks/Artists</h1>
+            <div class="right ui rail" style="">
+                <p></p>
+                <p></p>
+                <p></p>
+                <div class="ui sticky" style="width: 272px !important; height: 262.683px !important; left: 1356.5px;">
+                    <h3 class="ui header">Stuck Content</h3>
+                    <img>
+                </div>
+            </div>
           <div id="login" class="pusher">
               <div class="ui vertical masthead center aligned segment" style="min-height: 700px">
                   <div class="ui text container">
@@ -178,6 +187,11 @@
             $('select.dropdown')
                 .dropdown()
             ;
+            $('.ui.sticky')
+                .sticky({
+                    context: '#example2'
+                })
+            ;
         });
         function hoverPop(e) {
             $('.ui.progress.float_div')
@@ -199,6 +213,8 @@
                 .transition('pulse')
             ;
         }
+
+
 
 
     </script>
