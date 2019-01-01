@@ -63,14 +63,14 @@
               <div class="ui segments">
                   <div class="ui segment">
                       <div class="ui labeled input input_margin_right">
-                          <a class="ui label">Type</a>
+                          <span class="ui label">Type</span>
                           <select class="ui dropdown" id="top_type">
                               <option value="artists" selected="selected">Artists</option>
                               <option value="tracks">Tracks</option>
                           </select>
                       </div>
                       <div class="ui labeled input input_margin_right">
-                          <a class="ui label">Time range</a>
+                          <span class="ui label">Time range</span>
                           <select class="ui dropdown" id="top_time_range">
                               <option value="short_term">short term</option>
                               <option value="medium_term" selected="selected">medium term</option>
@@ -78,11 +78,11 @@
                           </select>
                       </div>
                       <div class="ui labeled input input_margin_right">
-                          <a class="ui label">Limit</a>
+                          <span class="ui label">Limit</span>
                           <input type="number" min="1" max="49" title="limit" value="20" id="top_limit" class="ui inverted input">
                       </div>
                       <div class="ui labeled input input_margin_right">
-                          <a class="ui label">Offset</a>
+                          <span class="ui label">Offset</span>
                           <input type="number" min="0" max="50" title="offset" value="0" id="top_offset" class="ui inverted input">
                       </div>
                   </div>
@@ -105,23 +105,23 @@
                 {{#each items}}
                     <div class="item">
                         <div class="ui small bordered image">
-                            <a href="{{this.external_urls.spotify}}" target="_blank">
+                            <span href="{{this.external_urls.spotify}}" target="_blank">
                                 {{#if_eq ../most_played_type "artists"}}
                                     <img onmouseover="animateImg(this)" class="image_cover image_miniature" src="{{this.images.0.url}}">
                             {{else}}
                                 <img onmouseover="animateImg(this)" class="image_cover image_miniature" src="{{this.album.images.0.url}}">
                             {{/if_eq}}
-                        </a>
+                        </span>
                     </div>
                     <div class="content">
-                        <a class="header" href="{{this.external_urls.spotify}}" target="_blank">{{this.name}} {{#if_eq ../most_played_type "tracks"}} - {{this.artists.0.name}} {{/if_eq}}</a>
+                        <span class="header" href="{{this.external_urls.spotify}}" target="_blank">{{this.name}} {{#if_eq ../most_played_type "tracks"}} - {{this.artists.0.name}} {{/if_eq}}</span>
                         <div class="meta">
                             <div class="meta">
-                                <a>Nr.{{add_offset (inc @index) ../offset}} in {{../most_played_type}} - {{../time_range}}</a>
+                                <span>Nr.{{add_offset (inc @index) ../offset}} in {{../most_played_type}} - {{../time_range}}</span>
                             </div>
                             <div class="meta">
                                 {{#if_eq ../most_played_type "tracks"}}
-                                    <a href="{{this.album.external_urls.spotify}}">Album - {{this.album.name}}</a>
+                                    <span href="{{this.album.external_urls.spotify}}">Album - {{this.album.name}}</span>
                                 {{/if_eq}}
                             </div>
                         </div>
@@ -139,9 +139,9 @@
                             {{#if genres }}
                             <div class="ui orange labels">
                                 {{#each genres}}
-                                <a class="ui label">
+                                <span class="ui label">
                                     {{this}}
-                                </a>
+                                </span>
                                 {{/each}}
                             </div>
                             {{/if}}
