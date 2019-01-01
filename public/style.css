@@ -99,3 +99,7 @@ html body div.meta a, .float_div.label {
 div.extra .ui[class*="right labeled"].icon.button {
     margin-left: 0.5em;
 }
+
+.background-image-container .ui.dividing.header {
+    border-bottom: 1px solid rgba(0,0,0,100);
+}
