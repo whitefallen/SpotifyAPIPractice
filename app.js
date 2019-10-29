@@ -2,7 +2,7 @@ var express = require('express'); // Express web server framework
 var request = require('request'); // "Request" library
 var querystring = require('querystring');
 var cookieParser = require('cookie-parser');
-var dotenv = require("dotenv").config();
+require("dotenv").config();
 
 var client_id = process.env.client_id; // Your client id
 var client_secret = process.env.client_secret; // Your secret
@@ -35,7 +35,7 @@ app.get('/login', function(req, res) {
   var state = generateRandomString(16);
   res.cookie(stateKey, state);
 
-  var scope = 'user-top-read';
+  var scope = 'user-top-read user-read-recently-played';
   res.redirect('https://accounts.spotify.com/authorize?' +
     querystring.stringify({
       response_type: 'code',
@@ -118,5 +118,4 @@ app.get('/refresh_token', function(req, res) {
 });
 
 console.log('Listening' + port);
-console.log(process.env.client_id);
 app.listen(port);

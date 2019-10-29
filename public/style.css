@@ -107,3 +107,7 @@ div.extra .ui[class*="right labeled"].icon.button {
 div.ui.container {
     padding-bottom: 2.5em;
 }
+
+div.ui.progress .bar {
+    min-width: 1em;
+}

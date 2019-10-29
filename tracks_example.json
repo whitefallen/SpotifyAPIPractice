@@ -1,0 +1,781 @@
+{
+  "items": [
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/6fOMl44jA4Sp5b9PpYCkzz"
+      },
+      "followers": {
+        "href": null,
+        "total": 2517746
+      },
+      "genres": [
+        "hip hop",
+        "rap"
+      ],
+      "href": "https://api.spotify.com/v1/artists/6fOMl44jA4Sp5b9PpYCkzz",
+      "id": "6fOMl44jA4Sp5b9PpYCkzz",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/55db20d7c49bdcf52162474265c66ca601054b1c",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/cac511faa02c9257d5a3317d6df4dfb52ca19b5b",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/9f6f0a7a4839971f76831b297875a4435e25a3d1",
+          "width": 160
+        }
+      ],
+      "name": "NF",
+      "popularity": 87,
+      "type": "artist",
+      "uri": "spotify:artist:6fOMl44jA4Sp5b9PpYCkzz"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/3TOqt5oJwL9BE2NG9MEwDa"
+      },
+      "followers": {
+        "href": null,
+        "total": 3382640
+      },
+      "genres": [
+        "alternative metal",
+        "nu metal",
+        "post-grunge",
+        "rap metal"
+      ],
+      "href": "https://api.spotify.com/v1/artists/3TOqt5oJwL9BE2NG9MEwDa",
+      "id": "3TOqt5oJwL9BE2NG9MEwDa",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/b57e634f63dc9a71052c5d61cafc00d221c42afb",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/8fd50dcb2405df64ba2e49659bf67c5d44e4c5e7",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/cd68221ec0217895d05c7352b55c27352bb26a63",
+          "width": 160
+        }
+      ],
+      "name": "Disturbed",
+      "popularity": 78,
+      "type": "artist",
+      "uri": "spotify:artist:3TOqt5oJwL9BE2NG9MEwDa"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/6MwPCCR936cYfM1dLsGVnl"
+      },
+      "followers": {
+        "href": null,
+        "total": 569181
+      },
+      "genres": [
+        "alternative metal",
+        "melodic metalcore",
+        "metalcore",
+        "screamo"
+      ],
+      "href": "https://api.spotify.com/v1/artists/6MwPCCR936cYfM1dLsGVnl",
+      "id": "6MwPCCR936cYfM1dLsGVnl",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/3146a4457f5d120219157358ec30dd172a32e695",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/3c27ddff5808d8afaafd87248ef8b43023e56bff",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/db88c44c9ef095f954af9d3a4e7a54d5f7d5db12",
+          "width": 160
+        }
+      ],
+      "name": "Motionless In White",
+      "popularity": 66,
+      "type": "artist",
+      "uri": "spotify:artist:6MwPCCR936cYfM1dLsGVnl"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/5BtHciL0e0zOP7prIHn3pP"
+      },
+      "followers": {
+        "href": null,
+        "total": 2607172
+      },
+      "genres": [
+        "alternative metal",
+        "nu metal",
+        "pop punk",
+        "post-grunge",
+        "rap rock"
+      ],
+      "href": "https://api.spotify.com/v1/artists/5BtHciL0e0zOP7prIHn3pP",
+      "id": "5BtHciL0e0zOP7prIHn3pP",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/1f742684b90d170fa5de0d6437971ee5e3920b9e",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/941954ffd229f44703629a9aeb28447a9cce8b75",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/ab6189f3a4d9d4a6411b1d4b1f6226776010a68c",
+          "width": 160
+        }
+      ],
+      "name": "Breaking Benjamin",
+      "popularity": 75,
+      "type": "artist",
+      "uri": "spotify:artist:5BtHciL0e0zOP7prIHn3pP"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/6bu7CtcOMWcS0BMq7snHW6"
+      },
+      "followers": {
+        "href": null,
+        "total": 159993
+      },
+      "genres": [
+        "melodic metalcore",
+        "metalcore",
+        "post-screamo"
+      ],
+      "href": "https://api.spotify.com/v1/artists/6bu7CtcOMWcS0BMq7snHW6",
+      "id": "6bu7CtcOMWcS0BMq7snHW6",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/c06962a0071f50660163381c066c6cc78c40d02f",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/b7f2dd51222afae56bc8d509e76f58314aa6052c",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/dc378433afe1859fd99948814d2501e6065f5f7a",
+          "width": 160
+        }
+      ],
+      "name": "Wage War",
+      "popularity": 64,
+      "type": "artist",
+      "uri": "spotify:artist:6bu7CtcOMWcS0BMq7snHW6"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/3HMsQNXUa0je3yG5REHkQ7"
+      },
+      "followers": {
+        "href": null,
+        "total": 69028
+      },
+      "genres": [
+        "christian hardcore",
+        "christian metal",
+        "christian rock",
+        "melodic metalcore",
+        "metalcore"
+      ],
+      "href": "https://api.spotify.com/v1/artists/3HMsQNXUa0je3yG5REHkQ7",
+      "id": "3HMsQNXUa0je3yG5REHkQ7",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/deb60b21bde94da89233034084d1eaf923c5c415",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/c0faff5e1139396a522b63a68774ffe258e92ce2",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/f7d0c541591305b7a43615f3f848b4d571983766",
+          "width": 160
+        }
+      ],
+      "name": "Oh, Sleeper",
+      "popularity": 45,
+      "type": "artist",
+      "uri": "spotify:artist:3HMsQNXUa0je3yG5REHkQ7"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/6GfiCQDFYANz5wUkSmb3Dr"
+      },
+      "followers": {
+        "href": null,
+        "total": 696650
+      },
+      "genres": [
+        "alternative metal",
+        "canadian ccm",
+        "canadian metal",
+        "canadian rock",
+        "christian alternative rock",
+        "christian rock",
+        "nu metal",
+        "post-grunge",
+        "rap metal",
+        "rap rock"
+      ],
+      "href": "https://api.spotify.com/v1/artists/6GfiCQDFYANz5wUkSmb3Dr",
+      "id": "6GfiCQDFYANz5wUkSmb3Dr",
+      "images": [
+        {
+          "height": 563,
+          "url": "https://i.scdn.co/image/558f7ee322b89c8d5b846a7b38e0ad83bbaa1386",
+          "width": 1000
+        },
+        {
+          "height": 360,
+          "url": "https://i.scdn.co/image/d895c6eceba3ee8f0c40f9c2c390c26a96f7f5d8",
+          "width": 640
+        },
+        {
+          "height": 113,
+          "url": "https://i.scdn.co/image/00caf7ba734a65df62a4fb000f871daf57348ab9",
+          "width": 200
+        },
+        {
+          "height": 36,
+          "url": "https://i.scdn.co/image/7940b4c50e9ea581cbc0c97e96097e728a65b19b",
+          "width": 64
+        }
+      ],
+      "name": "Thousand Foot Krutch",
+      "popularity": 68,
+      "type": "artist",
+      "uri": "spotify:artist:6GfiCQDFYANz5wUkSmb3Dr"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/7fM0h2CG7zKqKc0jEa1b4R"
+      },
+      "followers": {
+        "href": null,
+        "total": 12584
+      },
+      "genres": [
+        "gymcore",
+        "post-screamo"
+      ],
+      "href": "https://api.spotify.com/v1/artists/7fM0h2CG7zKqKc0jEa1b4R",
+      "id": "7fM0h2CG7zKqKc0jEa1b4R",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/edef35de338ad799622205404efff741d20188fb",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/cd893639868ace15b3654e971a38313ed21a475f",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/a28f5b06d970820a6e8f0cc1ef0707a56809b063",
+          "width": 160
+        }
+      ],
+      "name": "Citizen Soldier",
+      "popularity": 50,
+      "type": "artist",
+      "uri": "spotify:artist:7fM0h2CG7zKqKc0jEa1b4R"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/5t28BP42x2axFnqOOMg3CM"
+      },
+      "followers": {
+        "href": null,
+        "total": 3546960
+      },
+      "genres": [
+        "alternative metal",
+        "groove metal",
+        "nu metal",
+        "post-grunge"
+      ],
+      "href": "https://api.spotify.com/v1/artists/5t28BP42x2axFnqOOMg3CM",
+      "id": "5t28BP42x2axFnqOOMg3CM",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/8ed93611497acb959fd5de2a3ff5e4eaa9721e7c",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/e346d2c4e6a27425fd3b8beaade5d5ba5a95f3d5",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/f0fbc0ff158d3dd632e2480fb0e338e7a4d63acc",
+          "width": 160
+        }
+      ],
+      "name": "Five Finger Death Punch",
+      "popularity": 79,
+      "type": "artist",
+      "uri": "spotify:artist:5t28BP42x2axFnqOOMg3CM"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/4uOFEWy9mIcvQbr03IbPcL"
+      },
+      "followers": {
+        "href": null,
+        "total": 98657
+      },
+      "genres": [
+        "christian alternative rock",
+        "christian hip hop",
+        "christian music",
+        "christian rock",
+        "post-screamo"
+      ],
+      "href": "https://api.spotify.com/v1/artists/4uOFEWy9mIcvQbr03IbPcL",
+      "id": "4uOFEWy9mIcvQbr03IbPcL",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/3662adf44085f8b9f0c7b816270df16f44b6e584",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/ad51d57148a1504204a5b6e1113a80887e821187",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/2d7c675e5821932148a71883cbfab10bd87c2f59",
+          "width": 160
+        }
+      ],
+      "name": "Manafest",
+      "popularity": 53,
+      "type": "artist",
+      "uri": "spotify:artist:4uOFEWy9mIcvQbr03IbPcL"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/2vd2HnNh4pdYa9gDVHFjEu"
+      },
+      "followers": {
+        "href": null,
+        "total": 495349
+      },
+      "genres": [
+        "alternative metal",
+        "christian metal",
+        "groove metal",
+        "melodic metalcore",
+        "metalcore",
+        "nu metal"
+      ],
+      "href": "https://api.spotify.com/v1/artists/2vd2HnNh4pdYa9gDVHFjEu",
+      "id": "2vd2HnNh4pdYa9gDVHFjEu",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/5ae528deaa58d0c555ef724f78f347a9165fb3a9",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/cfcbeac6293afe5a40ee90930fff41138d8c85ad",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/8c2cdda2683dc93046ac83f9d121664ffe8a98d9",
+          "width": 160
+        }
+      ],
+      "name": "As I Lay Dying",
+      "popularity": 67,
+      "type": "artist",
+      "uri": "spotify:artist:2vd2HnNh4pdYa9gDVHFjEu"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/4rMxZovfLSDjEL9eI2pKo7"
+      },
+      "followers": {
+        "href": null,
+        "total": 104852
+      },
+      "genres": [
+        "post-screamo"
+      ],
+      "href": "https://api.spotify.com/v1/artists/4rMxZovfLSDjEL9eI2pKo7",
+      "id": "4rMxZovfLSDjEL9eI2pKo7",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/9dadbc87db8940d5d12c7d480cb5b3ea31b18e3d",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/c1f1a484bb51babf8929dea74ed5876698a0c4c0",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/5f8f4419067ec1e303ca0f53d25784db27d5034f",
+          "width": 160
+        }
+      ],
+      "name": "Slaves",
+      "popularity": 56,
+      "type": "artist",
+      "uri": "spotify:artist:4rMxZovfLSDjEL9eI2pKo7"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/6XyY86QOPPrYVGvF9ch6wz"
+      },
+      "followers": {
+        "href": null,
+        "total": 13849054
+      },
+      "genres": [
+        "alternative metal",
+        "nu metal",
+        "post-grunge",
+        "rap metal"
+      ],
+      "href": "https://api.spotify.com/v1/artists/6XyY86QOPPrYVGvF9ch6wz",
+      "id": "6XyY86QOPPrYVGvF9ch6wz",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/1685533969d5b68cbc630f991e873bd6467f1814",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/f759994946aa42851e5293083f472c96c1753105",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/0b0925b544b46d90a549f25a7f754ce6e59e6be2",
+          "width": 160
+        }
+      ],
+      "name": "Linkin Park",
+      "popularity": 86,
+      "type": "artist",
+      "uri": "spotify:artist:6XyY86QOPPrYVGvF9ch6wz"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/7bKo8Jgp76YNToFednF7kT"
+      },
+      "followers": {
+        "href": null,
+        "total": 6193
+      },
+      "genres": [
+        "middle earth"
+      ],
+      "href": "https://api.spotify.com/v1/artists/7bKo8Jgp76YNToFednF7kT",
+      "id": "7bKo8Jgp76YNToFednF7kT",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/14acf9e8a10806015ff43eefb0fbbdb7f172d72a",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/47391277ba2bd46c7cbccc7deeb31a456ef212f6",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/517193323c1218253b00a9658eb65694ab5bcf59",
+          "width": 160
+        }
+      ],
+      "name": "Tartalo Music",
+      "popularity": 39,
+      "type": "artist",
+      "uri": "spotify:artist:7bKo8Jgp76YNToFednF7kT"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/6cutt8thPFUICMfxaYerWd"
+      },
+      "followers": {
+        "href": null,
+        "total": 134400
+      },
+      "genres": [
+        "anime",
+        "j-pop",
+        "j-rock",
+        "japanese post-hardcore"
+      ],
+      "href": "https://api.spotify.com/v1/artists/6cutt8thPFUICMfxaYerWd",
+      "id": "6cutt8thPFUICMfxaYerWd",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/fe53777adf52dbd7f396dac09fb1a85f4282b9d6",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/7a666b38220e0419c6cc45e41164f3d87b410b1c",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/e875a898b32232d24be402d727243a0c58adefe8",
+          "width": 160
+        }
+      ],
+      "name": "MY FIRST STORY",
+      "popularity": 58,
+      "type": "artist",
+      "uri": "spotify:artist:6cutt8thPFUICMfxaYerWd"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/3Ri4H12KFyu98LMjSoij5V"
+      },
+      "followers": {
+        "href": null,
+        "total": 86385
+      },
+      "genres": [
+        "metalcore",
+        "post-screamo"
+      ],
+      "href": "https://api.spotify.com/v1/artists/3Ri4H12KFyu98LMjSoij5V",
+      "id": "3Ri4H12KFyu98LMjSoij5V",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/7b1adaf8493e98b65f7ecabc90da43f76d62e637",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/4e28ba98615869a18cef763cd66a33f66303ed0b",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/7d04af3c5e84669b66091d0e1050b4e90748a626",
+          "width": 160
+        }
+      ],
+      "name": "Bad Omens",
+      "popularity": 55,
+      "type": "artist",
+      "uri": "spotify:artist:3Ri4H12KFyu98LMjSoij5V"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/6BD4lgmnh4vy6kkCaZRDWt"
+      },
+      "followers": {
+        "href": null,
+        "total": 122954
+      },
+      "genres": [
+        "melodic metalcore",
+        "metalcore",
+        "screamo",
+        "uk metalcore",
+        "uk post-hardcore"
+      ],
+      "href": "https://api.spotify.com/v1/artists/6BD4lgmnh4vy6kkCaZRDWt",
+      "id": "6BD4lgmnh4vy6kkCaZRDWt",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/895b08be1b5c53801ccf18f448dec4059d8fda78",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/ca76f589d3d2cf004e85b54b3da0268e98ec1472",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/2e50ec5bee66d22ea6bbb1096e679b2bf6d29025",
+          "width": 160
+        }
+      ],
+      "name": "Bury Tomorrow",
+      "popularity": 56,
+      "type": "artist",
+      "uri": "spotify:artist:6BD4lgmnh4vy6kkCaZRDWt"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/1d5wNTZ8WZYE5WuXXjug9w"
+      },
+      "followers": {
+        "href": null,
+        "total": 154359
+      },
+      "genres": [
+        "alternative metal",
+        "christian rock",
+        "gymcore",
+        "nu metal",
+        "post-grunge",
+        "rap rock"
+      ],
+      "href": "https://api.spotify.com/v1/artists/1d5wNTZ8WZYE5WuXXjug9w",
+      "id": "1d5wNTZ8WZYE5WuXXjug9w",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/7b3395ba0c1db6defff331125ccf99b67d755926",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/c65915cd4b035eeb6e758423a52a7f1388f0d85f",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/0832c8d498d16ca9a8e42b99386582f6925e6574",
+          "width": 160
+        }
+      ],
+      "name": "Egypt Central",
+      "popularity": 58,
+      "type": "artist",
+      "uri": "spotify:artist:1d5wNTZ8WZYE5WuXXjug9w"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/4DWnSG0RYPAds8EIKY26q3"
+      },
+      "followers": {
+        "href": null,
+        "total": 92407
+      },
+      "genres": [
+        "cyberpunk",
+        "future rock",
+        "industrial metal",
+        "industrial rock"
+      ],
+      "href": "https://api.spotify.com/v1/artists/4DWnSG0RYPAds8EIKY26q3",
+      "id": "4DWnSG0RYPAds8EIKY26q3",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/31055f550ecb0e772aae614c36e517df65396c0e",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/332827bc2d36a7cef79023a1b51698ed0a432f51",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/ca44a37eab63392a02ede8a709567b8bc50a5815",
+          "width": 160
+        }
+      ],
+      "name": "Blue Stahli",
+      "popularity": 55,
+      "type": "artist",
+      "uri": "spotify:artist:4DWnSG0RYPAds8EIKY26q3"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/7fWgqc4HJi3pcHhK8hKg2p"
+      },
+      "followers": {
+        "href": null,
+        "total": 381652
+      },
+      "genres": [
+        "alternative metal",
+        "groove metal",
+        "industrial metal",
+        "industrial rock",
+        "nu metal",
+        "post-grunge",
+        "rap rock"
+      ],
+      "href": "https://api.spotify.com/v1/artists/7fWgqc4HJi3pcHhK8hKg2p",
+      "id": "7fWgqc4HJi3pcHhK8hKg2p",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/b0ac40e59135f05b3db0c3af32aa890b93f7dc10",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/6ae2052171387e3aa87c8d09b3aed3afa57aee37",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/e6a38823f0ae29f6e4379d5808c53fade9031a53",
+          "width": 160
+        }
+      ],
+      "name": "Dope",
+      "popularity": 61,
+      "type": "artist",
+      "uri": "spotify:artist:7fWgqc4HJi3pcHhK8hKg2p"
+    }
+  ],
+  "total": 50,
+  "limit": 20,
+  "offset": 0,
+  "previous": null,
+  "href": "https://api.spotify.com/v1/me/top/artists",
+  "next": "https://api.spotify.com/v1/me/top/artists?limit=20&offset=20",
+  "most_played_type": "artists",
+  "time_range": "medium_term"
+}
