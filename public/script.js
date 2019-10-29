@@ -90,7 +90,6 @@
                 success: function(response) {
                     response.most_played_type = type;
                     response.time_range = time_range;
-                    console.log(response);
                     if(type !== 'recent played') {
                         userArtistPlaceholder.innerHTML = userArtistTemplate(response);
                     } else {
