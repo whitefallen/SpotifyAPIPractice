@@ -32,9 +32,17 @@
         return parseInt(value) + 1;
     });
 
+    Handlebars.registerHelper("log", function(something) {
+        console.log(something);
+    });
+
     var userArtistSource = document.getElementById('user-artist-template').innerHTML,
         userArtistTemplate = Handlebars.compile(userArtistSource),
         userArtistPlaceholder = document.getElementById('top');
+
+    var userRecentPlayedSource = document.getElementById('user-recent-template').innerHTML,
+        userRecentPlayedTemplate = Handlebars.compile(userRecentPlayedSource),
+        userRecentPlayedPlaceholder = document.getElementById('top');
 
     var params = getHashParams();
 
@@ -67,7 +75,13 @@
             let time_range = document.getElementById('top_time_range').value;
             let offset = document.getElementById('top_offset').value;
             let limit = document.getElementById('top_limit').value;
-            let url = 'https://api.spotify.com/v1/me/top/' + type +'?'+'time_range='+time_range+'&limit='+limit+'&offset='+offset;
+            let url = '';
+            if(type !== 'recent played') {
+                url = 'https://api.spotify.com/v1/me/top/' + type +'?'+'time_range='+time_range+'&limit='+limit+'&offset='+offset;
+            } else {
+                url = 'https://api.spotify.com/v1/me/player/recently-played?type=track' + '&limit='+limit;
+            }
+
             $.ajax({
                 url: url,
                 headers: {
@@ -76,7 +90,15 @@
                 success: function(response) {
                     response.most_played_type = type;
                     response.time_range = time_range;
-                    userArtistPlaceholder.innerHTML = userArtistTemplate(response);
+                    console.log(response);
+                    if(type !== 'recent played') {
+                        userArtistPlaceholder.innerHTML = userArtistTemplate(response);
+                    } else {
+                        userRecentPlayedPlaceholder.innerHTML = userRecentPlayedTemplate(response);
+                    }
+                },
+                error: function(XMLHttpRequest, textStatus, errorThrown) {
+                    console.log("Status: " + textStatus); alert("Error: " + errorThrown);
                 }
             });
         }, false);
