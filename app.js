@@ -88,7 +88,7 @@ app.get('/callback', function(req, res) {
           }));
         */
 
-        res.redirect('/#');
+        res.redirect('/');
       } else {
         res.redirect(307,'/#' +
           querystring.stringify({
