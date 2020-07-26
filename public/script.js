@@ -3,22 +3,6 @@
     var access_token = null,
         refresh_token = null;
 
-    /**
-     * Obtains parameters from the hash of the URL
-     * @return Object
-     */
-    /*
-    function getHashParams() {
-        var hashParams = {};
-        var e, r = /([^&;=]+)=?([^&;]*)/g,
-            q = window.location.hash.substring(1);
-        while ( e = r.exec(q)) {
-            hashParams[e[1]] = decodeURIComponent(e[2]);
-        }
-        return hashParams;
-    }
-    */
-
     function spotifyListener() {
         let type = document.getElementById('top_type').value;
         let time_range = document.getElementById('top_time_range').value;
@@ -42,6 +26,13 @@
                 if(type !== 'recent played') {
                     userArtistPlaceholder.innerHTML = userArtistTemplate(response);
                 } else {
+                    if(response.items) {
+                        response.items.forEach(function (item) {
+                            if(item.played_at) {
+                                item.played_at = moment(item.played_at).format("DD.MM.YYYY HH:mm");
+                            }
+                        })
+                    }
                     userRecentPlayedPlaceholder.innerHTML = userRecentPlayedTemplate(response);
                 }
             },
