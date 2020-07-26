@@ -81,13 +81,6 @@ app.get('/callback', function(req, res) {
         spotify_access_token = body.access_token;
         spotify_refresh_token = body.refresh_token;
 
-        /*res.redirect('/#' +
-          querystring.stringify({
-            access_token: access_token,
-            refresh_token: refresh_token
-          }));
-        */
-
         res.redirect('/');
       } else {
         res.redirect(307,'/#' +
@@ -130,5 +123,5 @@ app.get('/tokens', function (req, res) {
   });
 });
 
-console.log('Listening' + port);
+console.log('Listening ' + port);
 app.listen(port);

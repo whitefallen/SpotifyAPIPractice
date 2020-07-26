@@ -111,3 +111,6 @@ div.ui.container {
 div.ui.progress .bar {
     min-width: 1em;
 }
+div.content span.header a {
+    color: black;
+}
