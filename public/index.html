@@ -1,10 +1,20 @@
 <!doctype html>
 <html>
   <head>
-    <title>Topsify</title>
+      <title>Topsify</title>
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
       <link rel="stylesheet" href="style.css">
       <link rel="icon" href="favicon.ico"/>
+      <meta charset=UTF-8 />
+      <meta content='width=device-width, initial-scale=1.0' name=viewport />
+      <meta content='“Display your favourit track, albums and your recent played tracks on one page, explore what you listen the most.”' name=description />
+      <meta content='“Display your favourit track, albums and your recent played tracks on one page, explore what you listen the most.”' name='twitter:description'/>
+      <meta content='“Display your favourit track, albums and your recent played tracks on one page, explore what you listen the most.”' property='og:description'/>
+      <meta content=Topsify property='og:site_name'/>
+      <meta content='Explore what you listen the most' property='og:title'/>
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content="https://spotifyranking.herokuapp.com/" />
+      <meta property="og:image" content="https://spotifyranking.herokuapp.com/assets/logos/02_CMYK/02_PNG/Spotify_Logo_CMYK_Green.png" />
   </head>
 
   <body>
@@ -28,7 +38,7 @@
                       </tr></thead><tbody>
                   <tr>
                       <td>Type</td>
-                      <td>artists or tracks</td>
+                      <td>artists, tracks or your recently played songs</td>
                       <td>Entity type to search for</td>
                   </tr>
                   <tr>
@@ -67,9 +77,12 @@
                           <select class="ui dropdown" id="top_type">
                               <option value="artists" selected="selected">Artists</option>
                               <option value="tracks">Tracks</option>
+                              <option value="recent played">Recently played</option>
                           </select>
                       </div>
-                      <div class="ui labeled input input_margin_right">
+                  </div>
+                  <div class="ui segment">
+                      <div class="ui labeled input input_margin_right" id="time_range_input">
                           <span class="ui label">Time range</span>
                           <select class="ui dropdown" id="top_time_range">
                               <option value="short_term">short term</option>
@@ -77,17 +90,17 @@
                               <option value="long_term">long term</option>
                           </select>
                       </div>
-                      <div class="ui labeled input input_margin_right">
+                      <div class="ui labeled input input_margin_right" id="limit_input">
                           <span class="ui label">Limit</span>
                           <input type="number" min="1" max="49" title="limit" value="20" id="top_limit" class="ui inverted input">
                       </div>
-                      <div class="ui labeled input input_margin_right">
+                      <div class="ui labeled input input_margin_right" id="offset_input">
                           <span class="ui label">Offset</span>
                           <input type="number" min="0" max="50" title="offset" value="0" id="top_offset" class="ui inverted input">
                       </div>
                   </div>
                   <div class="ui segment">
-                      <button class="ui right button" id="top-played">View most played</button>
+                      <button class="ui right button" id="top-played">Let the magic begin</button>
                   </div>
               </div>
 
@@ -105,75 +118,127 @@
                 {{#each items}}
                     <div class="item">
                         <div class="ui small bordered image">
-                            <span href="{{this.external_urls.spotify}}" target="_blank">
-                                {{#if_eq ../most_played_type "artists"}}
-                                    <img onmouseover="animateImg(this)" class="image_cover image_miniature" src="{{this.images.0.url}}">
-                            {{else}}
-                                <img onmouseover="animateImg(this)" class="image_cover image_miniature" src="{{this.album.images.0.url}}">
-                            {{/if_eq}}
-                        </span>
-                    </div>
-                    <div class="content">
-                        <span class="header" href="{{this.external_urls.spotify}}" target="_blank">{{this.name}} {{#if_eq ../most_played_type "tracks"}} - {{this.artists.0.name}} {{/if_eq}}</span>
-                        <div class="meta">
-                            <div class="meta">
-                                <span>Nr.{{add_offset (inc @index) ../offset}} in {{../most_played_type}} - {{../time_range}}</span>
-                            </div>
-                            <div class="meta">
-                                {{#if_eq ../most_played_type "tracks"}}
-                                    <span href="{{this.album.external_urls.spotify}}">Album - {{this.album.name}}</span>
-                                {{/if_eq}}
-                            </div>
+                            <span>
+                                <a href="{{this.external_urls.spotify}}" target="_blank">
+                                    {{#if_eq ../most_played_type "artists"}}
+                                        <img onmouseover="animateImg(this)" class="image_cover image_miniature" src="{{this.images.0.url}}">
+                                    {{else}}
+                                        <img onmouseover="animateImg(this)" class="image_cover image_miniature" src="{{this.album.images.0.url}}">
+                                    {{/if_eq}}
+                                </a>
+                            </span>
                         </div>
-                        <div class="description">
-                            {{#if followers }}
-                                <div class="ui label">
-                                    Followers:
-                                    <div class="detail">
-                                        {{followers.total}}
-                                    </div>
+                        <div class="content">
+                            <span class="header"><a href="{{this.external_urls.spotify}}" target="_blank">{{this.name}} {{#if_eq ../most_played_type "tracks"}} - {{this.artists.0.name}} {{/if_eq}}</a></span>
+                            <div class="meta">
+                                <div class="meta">
+                                    <span>Nr.{{add_offset (inc @index) ../offset}} in {{../most_played_type}} - {{../time_range}}</span>
                                 </div>
-                            {{/if}}
-                        </div>
-                        <div class="extra">
-                            {{#if genres }}
-                            <div class="ui orange labels">
-                                {{#each genres}}
-                                <span class="ui label">
-                                    {{this}}
-                                </span>
-                                {{/each}}
+                                <div class="meta">
+                                    {{#if_eq ../most_played_type "tracks"}}
+                                    <span><a href="{{this.album.external_urls.spotify}}" target="_blank">Album - {{this.album.name}}</a></span>
+                                    {{/if_eq}}
+                                </div>
                             </div>
-                            {{/if}}
-                            <div>
+                            <div class="description">
+                                {{#if followers }}
+                                    <div class="ui label">
+                                        Followers:
+                                        <div class="detail">
+                                            {{followers.total}}
+                                        </div>
+                                    </div>
+                                {{/if}}
+                            </div>
+                            <div class="extra">
+                                {{#if genres }}
+                                <div class="ui orange labels">
+                                    {{#each genres}}
+                                    <span class="ui label">
+                                        {{this}}
+                                    </span>
+                                    {{/each}}
+                                </div>
+                                {{/if}}
+                                <div>
 
-                                <div class="float_div label">
-                                    Popularity:
-                                </div>
-                                <div class="ui progress float_div" data-percent="{{this.popularity}}" data-content="Popularity : {{this.popularity}}" onmouseover="hoverPop(this)">
-                                    <div class="bar" style="width:{{this.popularity}}%;">
-                                        <div class="progress"></div>
+                                    <div class="float_div label">
+                                        Popularity:
+                                    </div>
+                                    <div class="ui progress float_div" data-percent="{{this.popularity}}" data-content="Popularity : {{this.popularity}}" onmouseover="hoverPop(this)">
+                                        <div class="bar" style="width:{{this.popularity}}%;">
+                                            <div class="progress"></div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="ui input float_div">
-                                <input type="text" placeholder="" value="{{this.external_urls.spotify}}" id="spotify_url_{{@index}}">
-                                <button class="ui teal right labeled icon button" onclick="myFunction(this);" data-input="spotify_url_{{@index}}">
-                                    <i class="copy icon"></i>
-                                    Copy
-                                </button>
+                                <div class="ui input float_div">
+                                    <input type="text" placeholder="" value="{{this.external_urls.spotify}}" id="spotify_url_{{@index}}">
+                                    <button class="ui teal right labeled icon button" onclick="copy(this);" data-input="spotify_url_{{@index}}">
+                                        <i class="copy icon"></i>
+                                        Copy
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
-                 </div>
                 {{/each}}
                 </div>
             </div>
         </script>
+        <script id="user-recent-template" type="text/x-handlebars-template">
+              <h2 class="ui dividing header">
+                  {{most_played_type}}
+              </h2>
+              <div class="ui container">
+                  <div class="ui relaxed divided items">
+                      {{#each items}}
+                      <div class="item">
+                          <div class="ui small bordered image">
+                              <span>
+                                  <a href="{{this.track.external_urls.spotify}}" target="_blank"><img onmouseover="animateImg(this)" class="image_cover image_miniature" src="{{this.track.album.images.0.url}}"></a>
+                              </span>
+                          </div>
+                          <div class="content">
+                              <span class="header"><a href="{{this.track.external_urls.spotify}}" target="_blank">{{this.track.name}} {{#if_eq ../most_played_type "tracks"}} - {{this.track.artists.0.name}} {{/if_eq}}</a></span>
+                              <div class="meta">
+                                  <div class="meta">
+                                      <span>Nr.{{inc @index}} in {{../most_played_type}} - {{played_at}}</span>
+                                  </div>
+                                  <div class="meta">
+                                      <span><a href="{{this.track.album.external_urls.spotify}}" target="_blank">Album - {{this.track.album.name}}</a></span>
+                                  </div>
+                              </div>
+                              <div class="extra">
+                                  <div>
+                                      <div class="float_div label">
+                                          Popularity:
+                                      </div>
+                                      <div class="ui progress float_div" data-percent="{{this.track.popularity}}" data-content="Popularity : {{this.track.popularity}}" onmouseover="hoverPop(this)">
+                                          <div class="bar" style="width:{{this.track.popularity}}%;">
+                                              <div class="progress"></div>
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <div class="ui input float_div">
+                                      <input type="text" placeholder="" value="{{this.track.external_urls.spotify}}" id="spotify_url_{{@index}}">
+                                      <button class="ui teal right labeled icon button" onclick="copy(this);" data-input="spotify_url_{{@index}}">
+                                          <i class="copy icon"></i>
+                                          Copy
+                                      </button>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      {{/each}}
+                  </div>
+              </div>
+          </script>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0-alpha.1/handlebars.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script type="application/javascript">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0-alpha.1/handlebars.min.js"></script>
+      <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
+      <script type="application/javascript">
         $(document).ready(function(){
             $('select.dropdown')
                 .dropdown()
@@ -187,7 +252,7 @@
             ;
         }
 
-        function myFunction(button) {
+        function copy(button) {
             data_input = button.dataset.input;
             ele = document.getElementById(data_input);
             ele.select();
@@ -200,11 +265,23 @@
             ;
         }
 
+        // Input Variables for the URL
+        var mostPlayedType = document.getElementById('top_type');
+        var timeRangeType = document.getElementById('time_range_input');
+        var limitType = document.getElementById('limit_input');
+        var offsetType = document.getElementById('offset_input');
+        mostPlayedType.addEventListener('change', function() {
+            if(mostPlayedType.value === 'recent played') {
+                $(timeRangeType).hide();
+                $(offsetType).hide();
+            } else {
+                $(timeRangeType).show();
+                $(offsetType).show();
+            }
+        })
 
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
-
-    <script src="script.js"></script>
+      <script src="script.js"></script>
   </body>
 </html>
 
