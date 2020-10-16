@@ -1,4 +1,4 @@
-Topsify
+Topsify!
 -----
 what has started as a hobby project to explore the Spotify API and Node.js. <br>
 is now deployed to Heroku - <a href="https://spotifyranking.herokuapp.com/">Topsify</a> <br>
