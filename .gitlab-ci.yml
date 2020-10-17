@@ -19,7 +19,7 @@ docker-deploy:
   script:
     - docker login -u "$CI_REGISTRY_USER" -p "$CI_REGISTRY_PASSWORD" $CI_REGISTRY
     - docker pull "$CI_REGISTRY_IMAGE"
-    - docker stop $(docker ps -q --filter ancestor="$CI_REGISTRY_IMAGE")
-    - docker run -p 3000:49160 -d "$CI_REGISTRY_IMAGE" 
+    - docker stop $(docker ps -q --filter ancestor=topsify)
+    - docker run -p 3000:49160 --name topsify -d "$CI_REGISTRY_IMAGE" 
   only:
     - master
