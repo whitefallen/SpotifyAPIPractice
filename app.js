@@ -124,4 +124,4 @@ app.get('/tokens', function (req, res) {
 });
 
 console.log('Listening ' + port);
-app.listen(port);
+app.listen(port, "0.0.0.0");
