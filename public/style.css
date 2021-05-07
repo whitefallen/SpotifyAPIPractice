@@ -114,3 +114,14 @@ div.ui.progress .bar {
 div.content span.header a {
     color: black;
 }
+.ui.progress.genres {
+    width:100%;
+}
+
+.ui.progress.genres .bar {
+    font-size: 0.8em;
+}
+
+.ui.progress.genres .bar .progress {
+    color: black;
+}

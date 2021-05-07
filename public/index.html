@@ -78,6 +78,7 @@
                               <option value="artists" selected="selected">Artists</option>
                               <option value="tracks">Tracks</option>
                               <option value="recent played">Recently played</option>
+                              <option value="genres">Genres</option>
                           </select>
                       </div>
                   </div>
@@ -161,7 +162,6 @@
                                 </div>
                                 {{/if}}
                                 <div>
-
                                     <div class="float_div label">
                                         Popularity:
                                     </div>
@@ -233,6 +233,22 @@
                   </div>
               </div>
           </script>
+        <script id="user-genre-distribution-template" type="text/x-handlebars-template">
+          <h2 class="ui dividing header">
+            {{most_played_type}}
+          </h2>
+          <div class="ui container">
+            <div class="ui relaxed items">
+              {{#each genresDistribution}}
+                <div class="ui progress genres orange inverted" data-percent="{{this.percent}}" data-content="Popularity : {{this.percent}}" onmouseover="hoverPop(this)">
+                  <div class="bar" style="width:{{this.percent}}%;">
+                    <div class="progress">{{this.name}}</div>
+                  </div>
+                </div>
+              {{/each}}
+            </div>
+          </div>
+        </script>
     </div>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0-alpha.1/handlebars.min.js"></script>
       <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
@@ -245,7 +261,7 @@
             ;
         });
         function hoverPop(e) {
-            $('.ui.progress.float_div')
+            $('.ui.progress')
                 .popup({
                     on: 'click'
                 })
@@ -253,8 +269,8 @@
         }
 
         function copy(button) {
-            data_input = button.dataset.input;
-            ele = document.getElementById(data_input);
+            let data_input = button.dataset.input;
+            let ele = document.getElementById(data_input);
             ele.select();
             document.execCommand("copy");
         }
@@ -266,10 +282,10 @@
         }
 
         // Input Variables for the URL
-        var mostPlayedType = document.getElementById('top_type');
-        var timeRangeType = document.getElementById('time_range_input');
-        var limitType = document.getElementById('limit_input');
-        var offsetType = document.getElementById('offset_input');
+        let mostPlayedType = document.getElementById('top_type');
+        let timeRangeType = document.getElementById('time_range_input');
+        let limitType = document.getElementById('limit_input');
+        let offsetType = document.getElementById('offset_input');
         mostPlayedType.addEventListener('change', function() {
             if(mostPlayedType.value === 'recent played') {
                 $(timeRangeType).hide();

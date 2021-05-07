@@ -1,6 +1,6 @@
 (function() {
 
-    var access_token = null,
+    let access_token = null,
         refresh_token = null;
 
     function spotifyListener() {
@@ -9,9 +9,12 @@
         let offset = document.getElementById('top_offset').value;
         let limit = document.getElementById('top_limit').value;
         let url = '';
-        if(type !== 'recent played') {
+        if(type === 'genres') {
+          url = 'https://api.spotify.com/v1/me/top/' + 'artists' +'?'+'time_range='+time_range+'&limit='+limit+'&offset='+offset;
+        }
+        if(type === 'artists' || type === 'tracks') {
             url = 'https://api.spotify.com/v1/me/top/' + type +'?'+'time_range='+time_range+'&limit='+limit+'&offset='+offset;
-        } else {
+        } else if(type === 'recent played') {
             url = 'https://api.spotify.com/v1/me/player/recently-played?type=track' + '&limit='+limit;
         }
 
@@ -23,9 +26,31 @@
             success: function(response) {
                 response.most_played_type = type;
                 response.time_range = time_range;
-                if(type !== 'recent played') {
+                if(type === 'genres' ) {
+                  let genresRes = response.items.map(item => item.genres);
+                  let genresArr = [];
+                  genresRes.forEach((genreSet => {
+                    genreSet.forEach(genreEntity => {
+                      let findGenre = genresArr.find(element => element.name === genreEntity);
+                      if(findGenre) {
+                        findGenre.amount +=1
+                      } else {
+                        genresArr.push({name: genreEntity, amount: 1})
+                      }
+                    })
+                  }))
+
+                  genresArr.sort((entryA, entryB) => entryB.amount - entryA.amount)
+                  let highest = genresArr[0];
+                  genresArr.forEach((entry) => {
+                    entry.percent = entry.amount / highest.amount * 100;
+                  })
+                  response.genresDistribution = genresArr;
+                  userGenreDistributionPlaceholder.innerHTML = userGenreDistributionTemplate(response);
+                }
+                if(type === 'artists' || type === 'tracks') {
                     userArtistPlaceholder.innerHTML = userArtistTemplate(response);
-                } else {
+                } else if(type === 'recent played') {
                     if(response.items) {
                         response.items.forEach(function (item) {
                             if(item.played_at) {
@@ -62,16 +87,20 @@
 
     Handlebars.registerHelper("log", function(something) {
         console.log(something);
+        return null;
     });
 
-    var userArtistSource = document.getElementById('user-artist-template').innerHTML,
+    let userArtistSource = document.getElementById('user-artist-template').innerHTML,
         userArtistTemplate = Handlebars.compile(userArtistSource),
         userArtistPlaceholder = document.getElementById('top');
 
-    var userRecentPlayedSource = document.getElementById('user-recent-template').innerHTML,
+    let userRecentPlayedSource = document.getElementById('user-recent-template').innerHTML,
         userRecentPlayedTemplate = Handlebars.compile(userRecentPlayedSource),
         userRecentPlayedPlaceholder = document.getElementById('top');
 
+    let userGenreDistributionSource = document.getElementById('user-genre-distribution-template').innerHTML,
+        userGenreDistributionTemplate = Handlebars.compile(userGenreDistributionSource),
+        userGenreDistributionPlaceholder = document.getElementById('top');
     /*
     var params = getHashParams();
     var error = params.error;
