@@ -10,7 +10,7 @@ const redirect_uri = process.env.callback; // Your redirect uri
 
 let spotify_access_token = null;
 let spotify_refresh_token = null;
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 80;
 /**
  * Generates a random string containing numbers and letters
  * @param  {number} length The length of the string

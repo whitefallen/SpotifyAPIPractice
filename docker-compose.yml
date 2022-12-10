@@ -7,7 +7,7 @@ services:
     image: topsify
     container_name: topsify_app
     ports:
-      - 3000:3000
+      - 3468:80
     restart: unless-stopped
     env_file:
       - .env
