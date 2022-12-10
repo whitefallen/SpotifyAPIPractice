@@ -1,7 +1,19 @@
 (function() {
 
-    let access_token = null,
-        refresh_token = null;
+    function getHashParams() {
+        var hashParams = {};
+        var e, r = /([^&;=]+)=?([^&;]*)/g,
+            q = window.location.hash.substring(1);
+        while ( e = r.exec(q)) {
+            hashParams[e[1]] = decodeURIComponent(e[2]);
+        }
+        return hashParams;
+    }
+    var params = getHashParams();
+
+    var access_token = params.access_token,
+        refresh_token = params.refresh_token,
+        error = params.error;
 
     function spotifyListener() {
         let type = document.getElementById('top_type').value;
@@ -101,34 +113,20 @@
     let userGenreDistributionSource = document.getElementById('user-genre-distribution-template').innerHTML,
         userGenreDistributionTemplate = Handlebars.compile(userGenreDistributionSource),
         userGenreDistributionPlaceholder = document.getElementById('top');
-    /*
-    var params = getHashParams();
-    var error = params.error;
-    */
 
     $.ajax({
-        url: '/tokens',
-        success: function(response) {
-            access_token = response.access_token;
-            refresh_token = response.refresh_token;
-            $.ajax({
-                url: 'https://api.spotify.com/v1/me',
-                headers: {
-                    'Authorization': 'Bearer ' + access_token
-                },
-                success: function() {
-                    $('#login').hide();
-                    $('#loggedin').show();
-                    document.getElementById('top-played').addEventListener('click', spotifyListener, false);
-                },
-                error: function (response) {
-                    $('#login').show();
-                    $('#loggedin').hide();
-                }
-            });
+        url: 'https://api.spotify.com/v1/me',
+        headers: {
+            'Authorization': 'Bearer ' + access_token
+        },
+        success: function() {
+            $('#login').hide();
+            $('#loggedin').show();
+            document.getElementById('top-played').addEventListener('click', spotifyListener, false);
         },
         error: function (response) {
-            console.log(response);
+            $('#login').show();
+            $('#loggedin').hide();
         }
     });
 
